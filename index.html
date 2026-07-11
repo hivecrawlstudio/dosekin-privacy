@@ -4,33 +4,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Dosekin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --fg:#1a1a1a; --muted:#555; --accent:#2e7d5b; --border:#e2e2e2; --bg:#ffffff; }
+  :root {
+    --brand:#1565C0; --brand-bg:#EAF1FB;
+    --green:#2E7D32; --green-bg:#EAF7EC;
+    --amber:#B45D0E; --amber-bg:#FDF1DF;
+    --ink:#12233B; --ink-2:#5B6470; --ink-3:#8A93A1;
+    --hairline:#EEF1F6; --outline:#E3E9F2;
+    --surface:#FFFFFF; --neutral-bg:#F4F6F9; --note-bg:#F8F9FC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --brand:#5E92F3; --brand-bg:#1E2A3C;
+      --green:#60AD5E; --green-bg:#1E2F22;
+      --amber:#F0B268; --amber-bg:#33270F;
+      --ink:#E2E2E6; --ink-2:#C4C6D0; --ink-3:#8A93A1;
+      --hairline:#2A2D31; --outline:#3A3E44;
+      --surface:#1A1C1E; --neutral-bg:#25282C; --note-bg:#212428;
+    }
+  }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-         color:var(--fg); background:var(--bg); line-height:1.65; }
-  .wrap { max-width:820px; margin:0 auto; padding:40px 24px 80px; }
-  h1 { font-size:2rem; margin:0 0 4px; }
-  h2 { font-size:1.25rem; margin:2.2em 0 .5em; padding-bottom:.3em; border-bottom:1px solid var(--border); }
-  h3 { font-size:1.05rem; margin:1.4em 0 .3em; }
-  p, li { color:var(--fg); }
-  .meta { color:var(--muted); font-size:.9rem; margin-bottom:2em; }
-  a { color:var(--accent); }
-  ul { padding-left:1.3em; }
-  li { margin:.3em 0; }
-  code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:.9em; }
-  table { border-collapse:collapse; width:100%; margin:1em 0; font-size:.95rem; }
-  th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
-  th { background:#f7f9f8; }
-  .callout { background:#f4faf7; border:1px solid #cfe8dc; border-radius:8px; padding:14px 16px; margin:1.5em 0; }
-  footer { margin-top:3em; padding-top:1.5em; border-top:1px solid var(--border); color:var(--muted); font-size:.88rem; }
+  html { background:var(--neutral-bg); }
+  body {
+    margin:0; font-family:'Lexend',-apple-system,Segoe UI,Roboto,sans-serif;
+    font-weight:300; color:var(--ink); background:var(--neutral-bg);
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .card {
+    max-width:760px; margin:32px auto; background:var(--surface);
+    border:1px solid var(--hairline); border-radius:20px;
+    padding:44px 40px 52px;
+  }
+  .brandmark {
+    display:inline-flex; align-items:center; gap:10px;
+    font-weight:600; color:var(--brand); font-size:1.05rem; letter-spacing:-.01em;
+  }
+  .dot { width:12px; height:12px; border-radius:50%; background:var(--brand); display:inline-block; }
+  h1 { font-size:1.9rem; font-weight:600; letter-spacing:-.02em; margin:20px 0 2px; }
+  h2 {
+    font-size:1.18rem; font-weight:500; letter-spacing:-.01em;
+    margin:2.4em 0 .6em; padding-bottom:.4em; border-bottom:1px solid var(--hairline);
+  }
+  h3 { font-size:1rem; font-weight:500; margin:1.5em 0 .3em; color:var(--ink); }
+  p, li { font-weight:300; }
+  strong { font-weight:500; }
+  .meta { color:var(--ink-2); font-size:.92rem; margin:6px 0 0; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  ul { padding-left:1.25em; }
+  li { margin:.35em 0; }
+  .callout {
+    background:var(--green-bg); border:1px solid var(--outline);
+    border-radius:14px; padding:16px 18px; margin:1.8em 0; font-size:.96rem;
+  }
+  table { border-collapse:separate; border-spacing:0; width:100%; margin:1.2em 0; font-size:.94rem;
+          border:1px solid var(--outline); border-radius:14px; overflow:hidden; }
+  th, td { padding:11px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--hairline); }
+  th { background:var(--brand-bg); color:var(--ink); font-weight:500; }
+  tr:last-child td { border-bottom:none; }
+  footer { margin-top:3em; padding-top:1.6em; border-top:1px solid var(--hairline);
+           color:var(--ink-3); font-size:.86rem; }
+  @media (max-width:560px){ .card{ margin:0; border-radius:0; border:none; padding:32px 22px 44px; } }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="card">
 
+  <span class="brandmark"><span class="dot"></span>Dosekin</span>
   <h1>Privacy Policy</h1>
-  <p class="meta"><strong>Dosekin — Family Pill Reminder</strong><br>
+  <p class="meta"><strong>Dosekin — Family Pill Reminder</strong> · Published by Hivecrawl Studio<br>
      Last updated: 11 July 2026</p>
 
   <p>This Privacy Policy explains how <strong>Dosekin</strong> ("the App", "we", "us"), published by
@@ -38,9 +83,9 @@
      or using the App you agree to the practices described below.</p>
 
   <div class="callout">
-    <strong>Health data notice.</strong> Dosekin is designed to manage medicine schedules and health
-    conditions for you and your family. Information you enter is sensitive. We treat it as confidential,
-    do not sell it, and do not use it for advertising.
+    <strong>Health data notice.</strong> Dosekin manages medicine schedules and health conditions for you and
+    your family. Information you enter is sensitive. We treat it as confidential, do not sell it, and do not
+    use it for advertising.
   </div>
 
   <h2>1. Information We Collect</h2>
@@ -146,9 +191,7 @@
   <p>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the
      "Last updated" date above. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
 
-  <footer>
-    &copy; 2026 Hivecrawl Studio. All rights reserved.
-  </footer>
+  <footer>&copy; 2026 Hivecrawl Studio. All rights reserved.</footer>
 
 </div>
 </body>
